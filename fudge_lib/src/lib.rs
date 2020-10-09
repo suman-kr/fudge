@@ -19,11 +19,30 @@ where
     stdout.reset().ok();
 }
 
-pub fn log<T>(log: Loggers, inp: T) -> Result<(), io::Error>
+/// Function to log the input to terminal with foreground color
+///  
+/// **Colors:** 
+/// `Warning` -> *Yellow*
+/// `Error` -> *Red*
+/// `Info` -> *Blue*
+/// 
+///  @param
+/// ---    
+///  logger: 
+/// ```
+/// pub enum Loggers {
+///     Warning,
+///     Error,
+///     Info,
+/// }
+/// ```
+/// inp: `T`
+/// 
+pub fn log<T>(loggger: Loggers, inp: T) -> Result<(), io::Error>
 where
     T: std::fmt::Debug,
 {
-    match log {
+    match loggger {
         Loggers::Error => Ok(colored_text(inp, Color::Red)),
         Loggers::Info => Ok(colored_text(inp, Color::Blue)),
         Loggers::Warning => Ok(colored_text(inp, Color::Yellow)),
