@@ -28,5 +28,4 @@ where
         Loggers::Info => Ok(colored_text(inp, Color::Blue)),
         Loggers::Warning => Ok(colored_text(inp, Color::Yellow)),
     }
-    // Err(io::Error::new(io::ErrorKind::NotFound, "Not Found"))
 }
