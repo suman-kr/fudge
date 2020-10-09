@@ -1,0 +1,20 @@
+[package]
+name = "fudge"
+version = "0.1.0"
+authors = ["Suman Kumar <skcool.123bgp@gmail.com>"]
+edition = "2018"
+description = "A minimal logger for Rust"
+license = "MIT OR Apache-2.0"
+keywords = ["log", "term"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+termcolor = "*"
+fudge_lib = {path = "fudge_lib"}
+
+[workspace]
+members = [
+    ".",
+    "fudge_lib"
+]
