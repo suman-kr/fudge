@@ -4,7 +4,7 @@ use termcolor::{Color, ColorChoice, ColorSpec, StandardStream, WriteColor};
 
 pub enum Loggers {
     Warning,
-    Danger,
+    Error,
     Info,
 }
 
@@ -24,7 +24,7 @@ where
     T: std::fmt::Debug,
 {
     match log {
-        Loggers::Danger => Ok(colored_text(inp, Color::Red)),
+        Loggers::Error => Ok(colored_text(inp, Color::Red)),
         Loggers::Info => Ok(colored_text(inp, Color::Blue)),
         Loggers::Warning => Ok(colored_text(inp, Color::Yellow)),
     }

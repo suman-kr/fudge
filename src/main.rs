@@ -1,4 +1,4 @@
-use fudge_lib::{log, Loggers};
+pub use fudge_lib::{log, Loggers};
 
 #[derive(Debug)]
 struct Student {
@@ -13,7 +13,7 @@ enum VehiclePrice {
 
 fn main() {
     let bike_price = VehiclePrice::Bike(30000);
-    log(Loggers::Danger, "Hello World".to_string()).ok();
+    log(Loggers::Error, "Hello World".to_string()).ok();
     log(Loggers::Warning, "Hello World".to_string()).ok();
     log(Loggers::Info, "Hello World".to_string()).ok();
     log(
