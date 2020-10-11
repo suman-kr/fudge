@@ -2,6 +2,11 @@ use chrono::Local;
 use std::io;
 use std::io::Write;
 use termcolor::{Color, ColorChoice, ColorSpec, StandardStream, WriteColor};
+
+/// **Colors:**
+/// `Warning` -> *Yellow*
+/// `Error` -> *Red*
+/// `Info` -> *Blue*
 pub enum Loggers {
     Warning,
     Error,
@@ -27,11 +32,6 @@ where
 
 /// Function to log the input to terminal with foreground color
 ///  
-/// **Colors:**
-/// `Warning` -> *Yellow*
-/// `Error` -> *Red*
-/// `Info` -> *Blue*
-///
 ///  @param
 /// ---    
 ///  logger:
