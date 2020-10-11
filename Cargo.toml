@@ -10,7 +10,6 @@ keywords = ["log", "term"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-termcolor = "*"
 fudge_lib = {path = "fudge_lib"}
 
 [workspace]
