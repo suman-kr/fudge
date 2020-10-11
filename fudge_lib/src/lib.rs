@@ -10,7 +10,7 @@ pub enum Loggers {
 
 fn format_date_time() -> String {
     let date_time = Local::now().to_string();
-    let formatted_string: Vec<&str> = date_time.split('.').collect();
+    let formatted_string: Vec<&str> = date_time.split(|i| i == '.').collect();
     formatted_string[0].into()
 }
 
